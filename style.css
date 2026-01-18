@@ -5,51 +5,41 @@
 
 body {
   margin: 0;
-  background: #2b1b12;
-  color: #3e2723;
+  background: #2a1a12;
 }
 
-/* TOPO */
 .topo {
-  background: linear-gradient(135deg, #6f4e37, #4e342e);
+  background: linear-gradient(135deg, #7a5230, #4e342e);
   color: #fff;
   padding: 25px;
   text-align: center;
 }
 
-/* CONTEÚDO */
 main {
   background: #f3e6d8;
   padding: 15px;
-  position: relative;
-  z-index: 1;
 }
 
-/* CATEGORIAS */
 .categoria h2 {
-  margin: 20px 0 10px;
+  color: #3e2723;
+  margin-top: 25px;
 }
 
-/* CARD CLICÁVEL */
 .card {
   background: #fffaf3;
-  border-radius: 14px;
   padding: 15px;
   margin-bottom: 12px;
+  border-radius: 14px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,.15);
   cursor: pointer;
-  position: relative;
-  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
 }
 
 .card:active {
-  background: #f0e0c8;
+  background: #efe0c6;
 }
 
-/* PEDIDO */
 .pedido {
   background: #fffaf3;
   padding: 15px;
@@ -57,7 +47,11 @@ main {
   margin-top: 20px;
 }
 
-/* BOTÃO WHATSAPP (NÃO BLOQUEIA CLICKS) */
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .whatsapp {
   position: fixed;
   bottom: 15px;
@@ -68,43 +62,13 @@ main {
   border-radius: 30px;
   border: none;
   background: #25d366;
-  color: #000;
   font-size: 18px;
   font-weight: bold;
-  z-index: 10;
 }
 
-/* RODAPÉ */
 footer {
   text-align: center;
   padding: 20px 10px 90px;
-  font-size: 14px;
   background: #3e2723;
   color: #fff;
-}
-
-/* IMPRESSÃO */
-@media print {
-  .whatsapp {
-    display: none;
-  }
-  /* GARANTE CLIQUE NOS CARDS */
-.card {
-  pointer-events: auto;
-}
-
-/* REMOVE BLOQUEIO DE CAMADAS */
-main, section, body {
-  pointer-events: auto;
-}
-
-/* GARANTE QUE NADA INVISÍVEL BLOQUEIE */
-header, footer {
-  pointer-events: auto;
-}
-
-/* BOTÃO WHATSAPP NÃO BLOQUEIA TELA */
-.whatsapp {
-  pointer-events: auto;
-}
 }
