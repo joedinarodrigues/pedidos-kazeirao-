@@ -38,4 +38,103 @@ body {
 /* FUNDO DO CONTEÚDO */
 main {
   padding: 15px;
-  background: linear-gradient(#
+  background: linear-gradient(#f3e6d8, #e6d3bc);
+}
+
+/* TÍTULOS */
+.categoria h2 {
+  margin: 28px 0 14px;
+  color: #3e2723;
+  border-left: 6px solid #8d6e63;
+  padding-left: 10px;
+}
+
+/* CARDS ESTILO TÁBUA */
+.card {
+  background:
+    linear-gradient(
+      90deg,
+      #fff3e0,
+      #efebe9
+    );
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:
+    inset 0 0 0 1px #d7ccc8,
+    0 6px 12px rgba(0,0,0,.18);
+  cursor: pointer;
+}
+
+.card strong {
+  color: #3e2723;
+}
+
+.card small {
+  color: #6d4c41;
+}
+
+.card span {
+  font-weight: bold;
+  color: #4e342e;
+}
+
+/* ÁREA DO PEDIDO */
+.pedido {
+  background:
+    linear-gradient(
+      180deg,
+      #fff8ee,
+      #efe0cf
+    );
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 25px;
+  box-shadow: inset 0 0 0 1px #d7ccc8;
+}
+
+.total {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3e2723;
+}
+
+/* BOTÃO WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  padding: 18px;
+  border-radius: 40px;
+  border: none;
+  font-size: 18px;
+  background: linear-gradient(#25d366, #1da851);
+  color: #083b1a;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  padding: 25px 10px 90px;
+  font-size: 14px;
+  background: #3e2723;
+  color: #efebe9;
+}
+
+/* IMPRESSÃO */
+@media print {
+  body {
+    background: white;
+  }
+  .whatsapp {
+    display: none;
+  }
+}
