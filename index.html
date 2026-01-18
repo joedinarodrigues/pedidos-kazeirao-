@@ -3,70 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kazeirão</title>
-<link rel="stylesheet" href="style.css">
+<title>Teste Clique</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.card {
+  background: #c49a6c;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-<header class="topo">
-  <h1>Kazeirão 🍽️</h1>
-  <p>Comida caseira • Pedido rápido no WhatsApp</p>
-</header>
+<h1>TESTE DE CLIQUE</h1>
 
-<main>
+<div class="card" onclick="clicou('Prato Feito')">
+  🍛 Prato Feito
+</div>
 
-<section class="categoria">
-  <h2>🍛 Refeições</h2>
+<div class="card" onclick="clicou('Carne Assada')">
+  🍖 Carne Assada
+</div>
 
-  <div class="card" onclick="add('Prato Feito',18)">
-    <div>
-      <strong>Prato Feito</strong>
-      <small>Arroz, feijão, carne e salada</small>
-    </div>
-    <span>R$ 18</span>
-  </div>
+<script>
+function clicou(nome) {
+  alert("CLICOU EM: " + nome);
+}
+</script>
 
-  <div class="card" onclick="add('Carne Assada',22)">
-    <div>
-      <strong>Carne Assada</strong>
-      <small>Acompanha arroz</small>
-    </div>
-    <span>R$ 22</span>
-  </div>
-</section>
-
-<section class="categoria">
-  <h2>🥤 Bebidas</h2>
-
-  <div class="card" onclick="add('Refrigerante',5)">
-    <strong>Refrigerante</strong>
-    <span>R$ 5</span>
-  </div>
-
-  <div class="card" onclick="add('Suco Natural',6)">
-    <strong>Suco Natural</strong>
-    <span>R$ 6</span>
-  </div>
-</section>
-
-<section class="pedido">
-  <h2>🧾 Seu pedido</h2>
-  <ul id="lista"></ul>
-  <div class="total">Total: R$ <span id="total">0</span></div>
-</section>
-
-</main>
-
-<button class="whatsapp" onclick="enviar()">
-  📲 Enviar pedido no WhatsApp
-</button>
-
-<footer>
-  <p>📍 Rua do Egito, Q11A nº4</p>
-  <p>📞 (98) 98416-8590</p>
-</footer>
-  
-  <script src="script.js?v=5"></script>
 </body>
 </html>
