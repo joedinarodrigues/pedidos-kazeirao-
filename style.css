@@ -1,37 +1,41 @@
-let pedido = [];
-let total = 0;
-
-function add(nome, preco) {
-  pedido.push(`${nome} - R$ ${preco}`);
-  total += preco;
-  atualizar();
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-function atualizar() {
-  const lista = document.getElementById("lista");
-  lista.innerHTML = "";
-  pedido.forEach(item => {
-    const li = document.createElement("li");
-    li.innerText = item;
-    lista.appendChild(li);
-  });
-  document.getElementById("total").innerText = total;
+body {
+  margin: 0;
+  background: #2b1b12;
+  color: #2e1e14;
 }
 
-function enviar() {
-  if (!pedido.length) {
-    alert("Adicione itens ao pedido");
-    return;
-  }
+/* TOPO COM TEXTURA DE MADEIRA */
+.topo {
+  background:
+    linear-gradient(
+      135deg,
+      #6f4e37 0%,
+      #5a3e2b 25%,
+      #7a5230 50%,
+      #5a3e2b 75%,
+      #6f4e37 100%
+    );
+  color: #fffaf0;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: inset 0 -6px 12px rgba(0,0,0,.4);
+}
 
-  const mensagem = encodeURIComponent(
-    "🍽️ *Pedido Kazeirão*\n\n" +
-    pedido.join("\n") +
-    "\n\n💰 Total: R$ " + total
-  );
+.topo h1 {
+  margin: 0;
+  letter-spacing: 1px;
+}
 
-  window.open(
-    "https://wa.me/559884168590?text=" + mensagem,
-    "_blank"
-  );
-  }
+.topo p {
+  opacity: .9;
+}
+
+/* FUNDO DO CONTEÚDO */
+main {
+  padding: 15px;
+  background: linear-gradient(#
