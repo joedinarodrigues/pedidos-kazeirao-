@@ -1,72 +1,74 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background: #111;
   color: #fff;
 }
 
 header {
-  text-align: center;
+  background: #d32f2f;
   padding: 20px;
-  background: #e60000;
+  text-align: center;
 }
 
-main {
+.categoria {
   padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
 }
 
-.card {
+.categoria h2 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.item {
   background: #1e1e1e;
   padding: 15px;
+  margin: 10px 0;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.card h2 {
-  margin: 0;
+.item:active {
+  background: #333;
 }
 
-.card p {
-  font-size: 14px;
-  color: #ccc;
-}
-
-.card span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0f0;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background: #e60000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-}
-
-#editar {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
+.pedido {
+  background: #000;
+  padding: 15px;
 }
 
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  width: 90%;
+  margin: 15px auto;
+  display: block;
+  padding: 15px;
   background: #25d366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+}
+
+.print {
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  background: #000;
+}
+
+@media print {
+  .whatsapp, .print, #editar {
+    display: none;
+  }
     }
