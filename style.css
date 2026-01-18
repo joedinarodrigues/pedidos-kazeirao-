@@ -22,32 +22,59 @@ main {
 
 .categoria h2 {
   color: #3e2723;
-  margin-top: 25px;
 }
 
 .card {
   background: #fffaf3;
-  padding: 15px;
-  margin-bottom: 12px;
   border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 14px;
   display: flex;
-  justify-content: space-between;
-  cursor: pointer;
+  gap: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,.2);
 }
 
-.card:active {
-  background: #efe0c6;
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.acoes button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #7a5230;
+  color: #fff;
+  font-size: 18px;
+}
+
+.preco {
+  font-weight: bold;
+  color: #3e2723;
 }
 
 .pedido {
   background: #fffaf3;
   padding: 15px;
   border-radius: 14px;
-  margin-top: 20px;
 }
 
 .total {
+  font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -66,9 +93,21 @@ main {
   font-weight: bold;
 }
 
+.print {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
 footer {
-  text-align: center;
-  padding: 20px 10px 90px;
   background: #3e2723;
   color: #fff;
+  text-align: center;
+  padding: 20px 10px 90px;
+}
+
+@media print {
+  .whatsapp, .acoes, select {
+    display: none;
+  }
 }
