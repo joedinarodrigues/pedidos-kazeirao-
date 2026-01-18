@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedidos Kazeirão</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazeirão</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <h1>🍔 Kazeirão</h1>
-  <p>Faça seu pedido agora</p>
+  <h1 id="titulo">🍽️ Kazeirão</h1>
+  <p>Cardápio digital • Pedido rápido</p>
 </header>
 
-<main id="produtos"></main>
+<section class="categoria">
+  <h2>🔥 Refeições</h2>
+  <div class="item" onclick="add('Prato Feito', 18)">Prato Feito <span>R$18</span></div>
+  <div class="item" onclick="add('Carne Assada', 22)">Carne Assada <span>R$22</span></div>
+</section>
 
-<button id="editar">✏️ Modo edição</button>
+<section class="categoria">
+  <h2>🥤 Bebidas</h2>
+  <div class="item" onclick="add('Refrigerante', 5)">Refrigerante <span>R$5</span></div>
+  <div class="item" onclick="add('Suco', 6)">Suco <span>R$6</span></div>
+</section>
 
-<a href="https://wa.me/5598984168590" class="whatsapp" target="_blank">
-  💬
-</a>
+<section class="categoria">
+  <h2>🍰 Sobremesas</h2>
+  <div class="item" onclick="add('Pudim', 6)">Pudim <span>R$6</span></div>
+</section>
+
+<section class="pedido">
+  <h2>🧾 Seu Pedido</h2>
+  <ul id="lista"></ul>
+  <strong>Total: R$ <span id="total">0</span></strong>
+</section>
+
+<button class="whatsapp" onclick="enviar()">📲 Fazer pedido no WhatsApp</button>
+<button class="print" onclick="window.print()">🖨️ Imprimir cardápio</button>
+
+<button id="editar" style="display:none;">✏️ Editar site</button>
+
+<footer>
+  <p>📍 Rua do Egito, Q11A nº4</p>
+  <p>📞 (98) 98416-8590</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
