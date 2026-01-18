@@ -1,139 +1,90 @@
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
   margin: 0;
   background: #2b1b12;
-  color: #2e1e14;
-}
-
-/* TOPO COM TEXTURA DE MADEIRA */
-.topo {
-  background:
-    linear-gradient(
-      135deg,
-      #6f4e37 0%,
-      #5a3e2b 25%,
-      #7a5230 50%,
-      #5a3e2b 75%,
-      #6f4e37 100%
-    );
-  color: #fffaf0;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: inset 0 -6px 12px rgba(0,0,0,.4);
-}
-
-.topo h1 {
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.topo p {
-  opacity: .9;
-}
-
-/* FUNDO DO CONTEÚDO */
-main {
-  padding: 15px;
-  background: linear-gradient(#f3e6d8, #e6d3bc);
-}
-
-/* TÍTULOS */
-.categoria h2 {
-  margin: 28px 0 14px;
   color: #3e2723;
-  border-left: 6px solid #8d6e63;
-  padding-left: 10px;
 }
 
-/* CARDS ESTILO TÁBUA */
+/* TOPO */
+.topo {
+  background: linear-gradient(135deg, #6f4e37, #4e342e);
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+/* CONTEÚDO */
+main {
+  background: #f3e6d8;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* CATEGORIAS */
+.categoria h2 {
+  margin: 20px 0 10px;
+}
+
+/* CARD CLICÁVEL */
 .card {
-  background:
-    linear-gradient(
-      90deg,
-      #fff3e0,
-      #efebe9
-    );
+  background: #fffaf3;
   border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 14px;
+  padding: 15px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow:
-    inset 0 0 0 1px #d7ccc8,
-    0 6px 12px rgba(0,0,0,.18);
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
-.card strong {
-  color: #3e2723;
+.card:active {
+  background: #f0e0c8;
 }
 
-.card small {
-  color: #6d4c41;
-}
-
-.card span {
-  font-weight: bold;
-  color: #4e342e;
-}
-
-/* ÁREA DO PEDIDO */
+/* PEDIDO */
 .pedido {
-  background:
-    linear-gradient(
-      180deg,
-      #fff8ee,
-      #efe0cf
-    );
-  padding: 16px;
-  border-radius: 16px;
-  margin-top: 25px;
-  box-shadow: inset 0 0 0 1px #d7ccc8;
+  background: #fffaf3;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 20px;
 }
 
-.total {
-  margin-top: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #3e2723;
-}
-
-/* BOTÃO WHATSAPP */
+/* BOTÃO WHATSAPP (NÃO BLOQUEIA CLICKS) */
 .whatsapp {
   position: fixed;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
-  padding: 18px;
-  border-radius: 40px;
+  width: 90%;
+  padding: 16px;
+  border-radius: 30px;
   border: none;
+  background: #25d366;
+  color: #000;
   font-size: 18px;
-  background: linear-gradient(#25d366, #1da851);
-  color: #083b1a;
   font-weight: bold;
-  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  z-index: 10;
 }
 
 /* RODAPÉ */
 footer {
   text-align: center;
-  padding: 25px 10px 90px;
+  padding: 20px 10px 90px;
   font-size: 14px;
   background: #3e2723;
-  color: #efebe9;
+  color: #fff;
 }
 
 /* IMPRESSÃO */
 @media print {
-  body {
-    background: white;
-  }
   .whatsapp {
     display: none;
   }
