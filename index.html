@@ -9,38 +9,58 @@
 
 <body>
 
-<header>
-  <h1 id="titulo">🍽️ Kazeirão</h1>
-  <p>Cardápio digital • Pedido rápido</p>
+<header class="topo">
+  <h1>Kazeirão 🍽️</h1>
+  <p>Comida caseira • Pedido rápido no WhatsApp</p>
 </header>
 
+<main>
+
 <section class="categoria">
-  <h2>🔥 Refeições</h2>
-  <div class="item" onclick="add('Prato Feito', 18)">Prato Feito <span>R$18</span></div>
-  <div class="item" onclick="add('Carne Assada', 22)">Carne Assada <span>R$22</span></div>
+  <h2>🍛 Refeições</h2>
+
+  <div class="card" onclick="add('Prato Feito',18)">
+    <div>
+      <strong>Prato Feito</strong>
+      <small>Arroz, feijão, carne e salada</small>
+    </div>
+    <span>R$ 18</span>
+  </div>
+
+  <div class="card" onclick="add('Carne Assada',22)">
+    <div>
+      <strong>Carne Assada</strong>
+      <small>Acompanha arroz</small>
+    </div>
+    <span>R$ 22</span>
+  </div>
 </section>
 
 <section class="categoria">
   <h2>🥤 Bebidas</h2>
-  <div class="item" onclick="add('Refrigerante', 5)">Refrigerante <span>R$5</span></div>
-  <div class="item" onclick="add('Suco', 6)">Suco <span>R$6</span></div>
-</section>
 
-<section class="categoria">
-  <h2>🍰 Sobremesas</h2>
-  <div class="item" onclick="add('Pudim', 6)">Pudim <span>R$6</span></div>
+  <div class="card" onclick="add('Refrigerante',5)">
+    <strong>Refrigerante</strong>
+    <span>R$ 5</span>
+  </div>
+
+  <div class="card" onclick="add('Suco Natural',6)">
+    <strong>Suco Natural</strong>
+    <span>R$ 6</span>
+  </div>
 </section>
 
 <section class="pedido">
-  <h2>🧾 Seu Pedido</h2>
+  <h2>🧾 Seu pedido</h2>
   <ul id="lista"></ul>
-  <strong>Total: R$ <span id="total">0</span></strong>
+  <div class="total">Total: R$ <span id="total">0</span></div>
 </section>
 
-<button class="whatsapp" onclick="enviar()">📲 Fazer pedido no WhatsApp</button>
-<button class="print" onclick="window.print()">🖨️ Imprimir cardápio</button>
+</main>
 
-<button id="editar" style="display:none;">✏️ Editar site</button>
+<button class="whatsapp" onclick="enviar()">
+  📲 Enviar pedido no WhatsApp
+</button>
 
 <footer>
   <p>📍 Rua do Egito, Q11A nº4</p>
