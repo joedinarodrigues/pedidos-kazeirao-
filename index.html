@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kazeirão</title>
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
 
 <header class="topo">
-  <h1>Kazeirão 🍽️</h1>
-  <p>Comida caseira • Peça no WhatsApp</p>
+  <h1 id="titulo">Kazeirão 🍽️</h1>
+  <p>Comida caseira • Pedido direto no WhatsApp</p>
 </header>
 
 <main>
@@ -20,29 +20,39 @@
   <h2>🍛 Refeições</h2>
 
   <div class="card" data-nome="Prato Feito" data-preco="18">
-    <strong>Prato Feito</strong>
-    <span>R$ 18</span>
+    <img src="https://i.imgur.com/5KJ6E7k.jpg">
+    <div class="info">
+      <strong contenteditable="false">Prato Feito</strong>
+      <small contenteditable="false">Arroz, feijão, carne e salada</small>
+      <div class="acoes">
+        <button class="menos">−</button>
+        <span class="qtd">0</span>
+        <button class="mais">+</button>
+      </div>
+    </div>
+    <span class="preco">R$ 18</span>
   </div>
 
-  <div class="card" data-nome="Carne Assada" data-preco="22">
-    <strong>Carne Assada</strong>
-    <span>R$ 22</span>
-  </div>
-</section>
-
-<section class="categoria">
-  <h2>🥤 Bebidas</h2>
-
-  <div class="card" data-nome="Refrigerante" data-preco="5">
-    <strong>Refrigerante</strong>
-    <span>R$ 5</span>
-  </div>
 </section>
 
 <section class="pedido">
   <h2>🧾 Seu pedido</h2>
+
+  <label>Bairro:</label>
+  <select id="bairro">
+    <option value="0">Retirada</option>
+    <option value="3">Centro (+R$3)</option>
+    <option value="5">Anjo da Guarda (+R$5)</option>
+    <option value="7">Outros (+R$7)</option>
+  </select>
+
   <ul id="lista"></ul>
-  <div class="total">Total: R$ <span id="total">0</span></div>
+
+  <div class="total">
+    Total: R$ <span id="total">0</span>
+  </div>
+
+  <button onclick="window.print()" class="print">🖨️ Imprimir pedido</button>
 </section>
 
 </main>
@@ -54,6 +64,6 @@
   <p>📞 (98) 98416-8590</p>
 </footer>
 
-<script src="script.js?v=1"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>
