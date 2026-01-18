@@ -1,72 +1,37 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
+let pedido = [];
+let total = 0;
+
+function add(nome, preco) {
+  pedido.push(`${nome} - R$ ${preco}`);
+  total += preco;
+  atualizar();
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background: #e60000;
+function atualizar() {
+  const lista = document.getElementById("lista");
+  lista.innerHTML = "";
+  pedido.forEach(item => {
+    const li = document.createElement("li");
+    li.innerText = item;
+    lista.appendChild(li);
+  });
+  document.getElementById("total").innerText = total;
 }
 
-main {
-  padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
+function enviar() {
+  if (!pedido.length) {
+    alert("Adicione itens ao pedido");
+    return;
+  }
 
-.card {
-  background: #1e1e1e;
-  padding: 15px;
-  border-radius: 10px;
-}
+  const mensagem = encodeURIComponent(
+    "🍽️ *Pedido Kazeirão*\n\n" +
+    pedido.join("\n") +
+    "\n\n💰 Total: R$ " + total
+  );
 
-.card h2 {
-  margin: 0;
-}
-
-.card p {
-  font-size: 14px;
-  color: #ccc;
-}
-
-.card span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0f0;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background: #e60000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-}
-
-#editar {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-decoration: none;
+  window.open(
+    "https://wa.me/559884168590?text=" + mensagem,
+    "_blank"
+  );
   }
