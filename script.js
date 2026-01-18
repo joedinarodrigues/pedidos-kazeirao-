@@ -1,64 +1,72 @@
-const telefone = "559884168590";
-
-const bairros = {
-  "Escolha o bairro": 0,
-  "Anjo da Guarda": 5,
-  "Centro": 6,
-  "Liberdade": 7,
-  "Cohab": 10,
-  "Outro": 12
-};
-
-const produtos = [
-  { nome:"Prato Feito", preco:15, img:"https://via.placeholder.com/300" },
-  { nome:"Frango Assado", preco:30, img:"https://via.placeholder.com/300" },
-  { nome:"Refrigerante", preco:5, img:"https://via.placeholder.com/300" }
-];
-
-let carrinho = [];
-let taxaEntrega = 0;
-
-const cardapio = document.getElementById("cardapio");
-const bairroSelect = document.getElementById("bairro");
-
-for (let b in bairros) {
-  bairroSelect.innerHTML += `<option value="${bairros[b]}">${b}</option>`;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
 }
 
-produtos.forEach((p,i)=>{
-  cardapio.innerHTML += `
-  <div class="card">
-    <img src="${p.img}">
-    <h3>${p.nome}</h3>
-    <p>R$ ${p.preco.toFixed(2)}</p>
-    <button onclick="add(${i})">Adicionar</button>
-  </div>`;
-});
-
-function add(i){
-  carrinho.push(produtos[i]);
-  calcular();
+header {
+  text-align: center;
+  padding: 20px;
+  background: #e60000;
 }
 
-bairroSelect.onchange = function(){
-  taxaEntrega = Number(this.value);
-  calcular();
-};
-
-function calcular(){
-  let total = carrinho.reduce((s,p)=>s+p.preco,0) + taxaEntrega;
-  document.getElementById("taxa").innerText = `Taxa: R$ ${taxaEntrega.toFixed(2)}`;
-  document.getElementById("total").innerText = `Total: R$ ${total.toFixed(2)}`;
+main {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
-function finalizarPedido(){
-  if(carrinho.length===0){
-    alert("Adicione itens ao carrinho");
-    return;
-  }
-  let msg = "Pedido:%0A";
-  carrinho.forEach(p=> msg += `- ${p.nome} R$${p.preco}%0A`);
-  msg += `Taxa: R$${taxaEntrega}%0A`;
-  msg += `Obs: ${document.getElementById("obs").value}`;
-  window.open(`https://wa.me/${telefone}?text=${msg}`);
-                          }
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0f0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+#editar {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+    }
