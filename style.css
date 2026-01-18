@@ -88,4 +88,23 @@ footer {
   .whatsapp {
     display: none;
   }
+  /* GARANTE CLIQUE NOS CARDS */
+.card {
+  pointer-events: auto;
+}
+
+/* REMOVE BLOQUEIO DE CAMADAS */
+main, section, body {
+  pointer-events: auto;
+}
+
+/* GARANTE QUE NADA INVISÍVEL BLOQUEIE */
+header, footer {
+  pointer-events: auto;
+}
+
+/* BOTÃO WHATSAPP NÃO BLOQUEIA TELA */
+.whatsapp {
+  pointer-events: auto;
+}
 }
