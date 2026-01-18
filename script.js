@@ -1,74 +1,98 @@
-* { box-sizing: border-box; font-family: Arial, sans-serif; }
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
 
 body {
   margin: 0;
-  background: #111;
-  color: #fff;
+  background: #f2e8dc;
+  color: #3b2f2f;
 }
 
-header {
-  background: #d32f2f;
-  padding: 20px;
+.topo {
+  background: linear-gradient(135deg, #5a3e2b, #3e2723);
+  color: #fff;
+  padding: 28px 20px;
   text-align: center;
 }
 
-.categoria {
+.topo p {
+  opacity: 0.9;
+}
+
+main {
   padding: 15px;
 }
 
 .categoria h2 {
-  border-bottom: 1px solid #444;
-  padding-bottom: 5px;
+  margin: 25px 0 12px;
+  color: #4e342e;
 }
 
-.item {
-  background: #1e1e1e;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
+.card {
+  background: #fffaf3;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
   cursor: pointer;
+  transition: transform .1s;
 }
 
-.item:active {
-  background: #333;
+.card:active {
+  transform: scale(0.98);
+}
+
+.card small {
+  color: #6d4c41;
+}
+
+.card span {
+  font-weight: bold;
+  color: #5d4037;
 }
 
 .pedido {
-  background: #000;
-  padding: 15px;
+  background: #fffaf3;
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 25px;
+}
+
+.total {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .whatsapp {
-  width: 90%;
-  margin: 15px auto;
-  display: block;
-  padding: 15px;
-  background: #25d366;
-  color: #000;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  padding: 18px;
+  border-radius: 40px;
+  border: none;
   font-size: 18px;
-  border: none;
-  border-radius: 30px;
-}
-
-.print {
-  width: 90%;
-  margin: 10px auto;
-  padding: 12px;
-  border-radius: 30px;
-  border: none;
+  background: #25d366;
+  color: #1b5e20;
+  font-weight: bold;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
 }
 
 footer {
   text-align: center;
+  padding: 22px 10px 90px;
   font-size: 14px;
-  padding: 10px;
-  background: #000;
+  color: #5d4037;
 }
 
 @media print {
-  .whatsapp, .print, #editar {
+  .whatsapp {
     display: none;
   }
-    }
+  }
