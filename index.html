@@ -1,53 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurante Kazeirão</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos Kazeirão</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="hero">
-  <h1>🍛 RESTAURANTE KAZEIRÃO</h1>
-  <p>É comida boa que fala 😋</p>
-  <span class="status aberto">🟢 ABERTO AGORA</span>
-  <span class="promo">🔥 PROMOÇÃO DO DIA 🔥</span>
+<header>
+  <h1>🍔 Kazeirão</h1>
+  <p>Faça seu pedido agora</p>
 </header>
 
-<main>
+<main id="produtos"></main>
 
-<section>
-<h2>🍽 Cardápio</h2>
-<div class="grid" id="cardapio"></div>
-</section>
+<button id="editar">✏️ Modo edição</button>
 
-<section id="entrega">
-<h2>🚴 Entrega</h2>
-
-<label>Bairro:</label>
-<select id="bairro"></select>
-
-<label>Observações:</label>
-<textarea id="obs" placeholder="Ex: sem cebola, bem passado"></textarea>
-
-<p id="taxa">Taxa: R$ 0,00</p>
-<p id="total">Total: R$ 0,00</p>
-
-<button onclick="finalizarPedido()">📲 Finalizar pedido no WhatsApp</button>
-</section>
-
-</main>
-
-<footer>
-<p>📍 Rua do Egito, Quadra 11A, nº 4</p>
-<p>📞 (98) 9 8416-8590</p>
-<p>💳 Pix | Débito | Crédito (+5%) | Alelo (+5%)</p>
-</footer>
-
-<a href="#" class="whatsapp-float" onclick="finalizarPedido()">💬</a>
+<a href="https://wa.me/5598984168590" class="whatsapp" target="_blank">
+  💬
+</a>
 
 <script src="script.js"></script>
 </body>
-  </html>
+</html>
