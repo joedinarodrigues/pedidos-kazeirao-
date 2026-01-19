@@ -10,45 +10,40 @@
 <body>
 
 <header>
-  <h1>🍖 Kazeirão</h1>
-  <p>Comida caseira de verdade</p>
+  <h1>Kazeirão</h1>
+  <p>Cardápio digital</p>
 </header>
 
 <main>
 
-<h2>Escolha sua proteína</h2>
-<div id="proteinas"></div>
+<section>
+  <h2>🍗 Escolha a proteína</h2>
+  <div id="proteinas" class="grid"></div>
+</section>
 
-<div id="acompsBox" class="hidden">
-  <h2>Acompanhamentos (2 a 6)</h2>
-  <div id="acomps"></div>
-</div>
+<section id="boxAcomps" class="hidden">
+  <h2>🍚 Acompanhamentos (2 a 6)</h2>
+  <div id="acomps" class="grid"></div>
+</section>
 
-<div id="saladasBox" class="hidden">
-  <h2>Saladas (1 a 2)</h2>
-  <div id="saladas"></div>
-</div>
+<section id="boxSaladas" class="hidden">
+  <h2>🥗 Saladas (1 a 2)</h2>
+  <div id="saladas" class="grid"></div>
+</section>
 
-<h2>Dados do Cliente</h2>
-<input id="nome" placeholder="Seu nome">
-<input id="endereco" placeholder="Endereço completo">
-<textarea id="obs" placeholder="Observações"></textarea>
+<section>
+  <h2>📋 Dados do cliente</h2>
+  <input id="nome" placeholder="Seu nome">
+  <input id="endereco" placeholder="Endereço completo">
+  <textarea id="obs" placeholder="Observações"></textarea>
+</section>
 
-<h2>Forma de pagamento</h2>
-<select id="pagamento">
-  <option value="">Selecione</option>
-  <option>Pix</option>
-  <option>Débito</option>
-  <option>Crédito</option>
-  <option>Dinheiro</option>
-</select>
-
-<button onclick="enviarPedido()">📲 Enviar Pedido</button>
+<button onclick="enviarPedido()">📲 Enviar pedido no WhatsApp</button>
 
 </main>
 
 <footer>
-  <p>📍 Rua do Egito – São Luís/MA</p>
+  <p>Delivery Kazeirão</p>
 </footer>
 
 <script src="script.js"></script>
